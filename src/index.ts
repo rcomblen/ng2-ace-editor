@@ -28,6 +28,7 @@ export class AceEditorDirective {
 
   init() {
     this.editor.setOptions(this._options || {});
+    this.editor.$blockScrolling = Infinity;
     this.editor.setTheme(`ace/theme/${this._theme}`);
     this.editor.getSession().setMode(`ace/mode/${this._mode}`);
     this.editor.setReadOnly(this._readOnly);
