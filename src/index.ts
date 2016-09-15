@@ -6,8 +6,7 @@ import 'brace/mode/html';
 declare var ace:any;
 
 @Directive({
-  selector: '[ace-editor]',
-  outputs: ['textChanged']
+  selector: '[ace-editor]'
 })
 export class AceEditorDirective {
   @Output('textChanged') textChanged = new EventEmitter();

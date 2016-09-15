@@ -130,8 +130,7 @@ var AceEditorDirective = (function () {
     ], AceEditorDirective.prototype, "autoUpdateContent", null);
     AceEditorDirective = __decorate([
         core_1.Directive({
-            selector: '[ace-editor]',
-            outputs: ['textChanged']
+            selector: '[ace-editor]'
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
     ], AceEditorDirective);
