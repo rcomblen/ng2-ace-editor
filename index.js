@@ -10,14 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 require('brace');
-require('brace/theme/monokai');
+require('brace/theme/chrome');
 require('brace/mode/html');
 var AceEditorDirective = (function () {
     function AceEditorDirective(elementRef) {
         this.textChanged = new core_1.EventEmitter();
         this._options = {};
         this._readOnly = false;
-        this._theme = "monokai";
+        this._theme = "chrome";
         this._mode = "html";
         this._autoUpdateContent = true;
         var el = elementRef.nativeElement;

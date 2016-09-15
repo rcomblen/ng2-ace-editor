@@ -1,6 +1,6 @@
 import { Directive, EventEmitter, Output, ElementRef, Input } from '@angular/core';
 import 'brace';
-import 'brace/theme/monokai';
+import 'brace/theme/chrome';
 import 'brace/mode/html';
 
 declare var ace:any;
@@ -12,7 +12,7 @@ export class AceEditorDirective {
   @Output('textChanged') textChanged = new EventEmitter();
   _options:any = {};
   _readOnly:boolean = false;
-  _theme:string = "monokai";
+  _theme:string = "chrome";
   _mode:string = "html";
   _autoUpdateContent:boolean = true;
   editor:any;
