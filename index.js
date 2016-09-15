@@ -131,7 +131,6 @@ var AceEditorDirective = (function () {
     AceEditorDirective = __decorate([
         core_1.Directive({
             selector: '[ace-editor]',
-            inputs: ['text', 'mode', 'theme', 'readOnly', 'options', 'autoUpdateContent'],
             outputs: ['textChanged']
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])

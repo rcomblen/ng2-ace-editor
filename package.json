@@ -29,10 +29,10 @@
     "url": "https://github.com/fxmontigny/ng2-ace-editor/issues"
   },
   "dependencies": {
-    "brace": "^0.8.0"
+    "brace": "^0.8.0",
+    "@angular/core": "2.0.0-rc.5"
   },
   "peerDependencies": {
-    "@angular/core": "2.0.0-rc.5"
   },
   "devDependencies": {
     "typescript": "1.8.10",
