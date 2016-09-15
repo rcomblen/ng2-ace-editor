@@ -7,7 +7,6 @@ declare var ace:any;
 
 @Directive({
   selector: '[ace-editor]',
-  inputs: ['text', 'mode', 'theme', 'readOnly', 'options', 'autoUpdateContent'],
   outputs: ['textChanged']
 })
 export class AceEditorDirective {
