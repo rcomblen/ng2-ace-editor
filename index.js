@@ -31,6 +31,20 @@ var AceEditorDirective = (function () {
         this.editor.setTheme("ace/theme/" + this._theme);
         this.editor.getSession().setMode("ace/mode/" + this._mode);
         this.editor.setReadOnly(this._readOnly);
+        var session = this.editor.getSession();
+        session.on('changeAnnotation', function () {
+            var annotations = session.getAnnotations() || [];
+            var len = annotations.length;
+            var i = len;
+            while (i--) {
+                if (/doctype first\. Expected/.test(annotations[i].text)) {
+                    annotations.splice(i, 1);
+                }
+            }
+            if (len > annotations.length) {
+                session.setAnnotations(annotations);
+            }
+        });
     };
     AceEditorDirective.prototype.initEvents = function () {
         var _this = this;

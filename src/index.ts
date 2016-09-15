@@ -32,6 +32,20 @@ export class AceEditorDirective {
     this.editor.setTheme(`ace/theme/${this._theme}`);
     this.editor.getSession().setMode(`ace/mode/${this._mode}`);
     this.editor.setReadOnly(this._readOnly);
+    let session = this.editor.getSession();
+    session.on('changeAnnotation', () => {
+      let annotations = session.getAnnotations()||[];
+      let len = annotations.length;
+      let i = len;
+      while (i--) {
+        if(/doctype first\. Expected/.test(annotations[i].text)) {
+          annotations.splice(i, 1);
+        }
+      }
+      if(len>annotations.length) {
+        session.setAnnotations(annotations);
+      }
+    });
   }
 
   initEvents() {
