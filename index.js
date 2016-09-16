@@ -31,6 +31,7 @@ var AceEditorDirective = (function () {
         this.editor.setTheme("ace/theme/" + this._theme);
         this.editor.getSession().setMode("ace/mode/" + this._mode);
         this.editor.setReadOnly(this._readOnly);
+        this.editor.container.style.lineHeight = 1;
         var session = this.editor.getSession();
         session.on('changeAnnotation', function () {
             var annotations = session.getAnnotations() || [];
